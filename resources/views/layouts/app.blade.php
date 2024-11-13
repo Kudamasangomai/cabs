@@ -4,7 +4,7 @@
     <nav id="sidebar-menu" x-description="Mobile menu" x-bind:aria-expanded="open"
     :class="{ 'w-56 ml-0 md:w-20 sidebar-small': open, 'w-64 -ml-64 md:ml-0': !(open) }"
     class="fixed z-40 w-56 h-screen text-white transition-all duration-500 ease-in-out "
-    style="background-image: url('/images/trucknew.jpg'); background-size: cover; background-position: center;">
+    style="background-image: url('/images/d.jpg'); background-size: cover; background-position: center;">
     <div class="h-full overflow-y-auto sidebar-small-overflow scrollbars show bg-[#0437F2]">
 
 
