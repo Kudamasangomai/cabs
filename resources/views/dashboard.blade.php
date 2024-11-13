@@ -13,7 +13,7 @@
     </div>
 
     <!-- row -->
-    @if (Auth::user()->is_admin)
+    @if(Auth::user()->is_admin)
         
    
     <div class="flex flex-row flex-wrap">
