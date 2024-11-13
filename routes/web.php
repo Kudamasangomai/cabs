@@ -35,7 +35,7 @@ Route::middleware('splade')->group(function () {
 
     Route::middleware('auth')->group(function () {
 
-        Route::get('/dashboard',DashboardController::class)->middleware(['auth'])->name('dashboard');
+        Route::get('/dashboard',DashboardController::class,'__invoke')->middleware(['auth'])->name('dashboard');
 
         Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
