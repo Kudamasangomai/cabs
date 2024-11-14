@@ -21,7 +21,7 @@
     
         <div class="flex-shrink w-1/2 max-w-full px-4 mb-4 form-group">
   
-          <x-splade-input name="nationalid" label="National ID" />  
+          <x-splade-input name="nationalid" label="National ID (63-2499371r43)" />  
           
         </div>
 

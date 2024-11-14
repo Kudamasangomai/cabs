@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Carbon\Carbon;
 use App\Models\Account;
 use App\Mail\DailyReports;
+use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
 
@@ -36,11 +37,16 @@ class DailyApplicationReport extends Command
             $this->info('Query result is empty. Cron job will not be executed.');
             return;
         }  
+        $admins = User::where('is_admin',true)->get();
 
-        $recipients = [
-            'kudam775@gmail.com',
-        ];
+        foreach ($admins as $admin) {
+            Mail::to($admins)->send(new DailyReports());
+        }
 
-        Mail::to($recipients)->send(new DailyReports());
+        // $recipients = [
+        //     'kudam775@gmail.com',
+        // ];
+
+      
     }
 }

@@ -22,9 +22,9 @@ class StoreAccountRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nationalid' => 'required',
-            'dateofbirth' => 'required',
-            'phonenumber' => 'required|numeric',
+            'nationalid' => 'required|regex:/^\d{2}-\d{7}[a-zA-Z]\d{2}$/',
+            'dateofbirth' => 'required|date|before:today,',
+            'phonenumber' => 'required|numeric|digits_between:8,13',
             'gender' => 'required',
             'image' => 'required|image|mimes:jpg, jpeg, png',
             'proofofresidency' => 'required|mimes:pdf',

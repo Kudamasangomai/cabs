@@ -13,7 +13,7 @@ class creatuseadmin extends Command
      *
      * @var string
      */
-    protected $signature = 'creatuseradmin';
+    protected $signature = 'createadmin';
 
     /**
      * The console command description.
