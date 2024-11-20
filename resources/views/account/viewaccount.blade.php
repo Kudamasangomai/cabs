@@ -77,6 +77,7 @@
     <div class="flex flex-row flex-wrap -mx-4">
         <div class="flex-shrink w-1/2 max-w-full px-4 mb-4 place-items-center">
             <h5> Proof Of Income</h5>
+            <a href="{{ asset('storage/' . $account->proofofincome) }}" class="btn btn-primary">Download proof of income</a>
               <embed src="{{ asset('storage/' . $account->proofofincome) }}" type="application/pdf" width="100%" height="400px" />
   
         </div>

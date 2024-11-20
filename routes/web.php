@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CardController;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
@@ -41,7 +42,7 @@ Route::middleware('splade')->group(function () {
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
+        Route::resource('users',UsersController::class);
         Route::resource('account',AccountController::class);
         Route::post('/account/reject/{id}',[AccountController::class,'reject'])->name('account.reject');
         Route::post('/account/approve/{id}',[AccountController::class,'approve'])->name('account.approve');
